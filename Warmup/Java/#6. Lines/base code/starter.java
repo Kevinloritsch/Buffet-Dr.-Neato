@@ -15,7 +15,7 @@ public class starter implements InputControl, InputKeyControl
 			
 			// please leave following line alone, necessary for keyboard input
 			KeyController kC = new KeyController(Canvas.getInstance(),new starter());
-			System.out.println("Would you like a line (input the letter x) or a triangle (input the letter t)?");
+			System.out.println("Would you like a triangle (input the letter t)?");
 			joe_in = new EasyReader();
 			jackson = joe_in.readWord();
 			
