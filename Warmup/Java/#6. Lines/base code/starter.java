@@ -37,10 +37,10 @@ public class starter implements InputControl, InputKeyControl
 						int e = Canvas.rand(1000);
 						
 			
-				if (jackson == x)
-				{
+				// if (jackson == x)
+				// {
 					
-				}
+				// }
 				if (jackson.equals("t")) 
 				{
 						joe = new Line (t, r, i, a);

@@ -3,24 +3,7 @@ public class starter implements InputControl, InputKeyControl
 {
 		static Text josiah;
 		static int key;
-		static Ellipse one;
-		static int counter = 0;
-		static int stop;
-		static int down;
 
-		public void onMouseClick(double x, double y)
-		{
-		
-		if(counter == 0)
-		{
-			counter = counter + 1;
-		}
-		else
-		{
-			counter = 0;
-		}
-	
-		}
         public static void main(String args[])
         {
 		
@@ -30,8 +13,8 @@ public class starter implements InputControl, InputKeyControl
 			// please leave following line alone, necessary for keyboard input
 			KeyController kC = new KeyController(Canvas.getInstance(),new starter());
 			System.out.println("WARNINNG!! May include a strobing effect. ");
-			System.out.println("Please enter a word or phrase (shorter is recommended):");
-			
+			System.out.println("Please enter a word:");
+		
 			EasyReader joe_in;
 			joe_in = new EasyReader();
 			
@@ -39,11 +22,10 @@ public class starter implements InputControl, InputKeyControl
 			
 			josiah = new Text(300,300,daniel);
 			
-			while(counter == 0)
+			while(true)
 			{
-			
-				josiah.grow(8,8);
-				Canvas.pause(0);
+				josiah.grow(2,2);
+				Canvas.pause(10);
 				Canvas.snapshot();
 				int redvalue = Canvas.rand(256);
 				int greenvalue = Canvas.rand(256);
@@ -51,17 +33,27 @@ public class starter implements InputControl, InputKeyControl
 				Color col = new Color(redvalue,greenvalue,bluevalue);
 				josiah.setColor(col);
 				josiah.draw();
+				
+			
+		
 			}
 		}
+
+
+			
 		
 		
+		public void onMouseClick(double x, double y){
+			// and/or here
+	
+		}
 		
 		public void keyPress(String s)
 		{
-			if(s.equals("r"))
-			{
-			josiah.grow(-80,-80);
-			}
+			// temp holds the enter character
+			
+			char done = (char)10;
+			String temp = Character.toString(done);
 			
 		}
 }
