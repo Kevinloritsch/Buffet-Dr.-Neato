@@ -25,7 +25,7 @@ main()
 	char joe;
 	int sam;
 	int daniel;
-	int numy = 10;
+	int numy;
 	int numx;
 	int xc;
 	int yc;

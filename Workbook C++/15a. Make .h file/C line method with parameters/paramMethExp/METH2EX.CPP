@@ -4,8 +4,8 @@
 // This method will let the user pick how many times the message is
 // written to the screen.
 
-#include<iostream.h>
-#include<conio.h>
+//#include<iostream.h>
+//#include<conio.h>
 
 void writeMessageAgain(int);
 
