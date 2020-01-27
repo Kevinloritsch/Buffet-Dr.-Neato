@@ -10,13 +10,18 @@ window = GraphWin("Window", 2000,1000);
 
 window.setBackground("white")
 
+#Sky
+window.getMouse()
 sky = Rectangle(Point(0,0),Point(50000,50000))
 sky.setFill("cyan")
 sky.draw(window)
-
+#Sun
+window.getMouse()
 sun = Circle(Point(700,50),40)
 sun.setFill("yellow")
 sun.draw(window)
+#Ground
+window.getMouse()
 ground = Rectangle(Point(0,400),Point(5000,800))
 ground.setFill("green")
 ground.draw(window);
@@ -24,7 +29,8 @@ ground.draw(window);
 bob=400
 bobo=408
 bobob=416
-
+#Fence
+window.getMouse()
 lineo = Rectangle(Point(400,368),Point(880,368))
 lineo.draw(window)
 
@@ -42,7 +48,8 @@ for x in range(0,20):
     
 
 
-
+#Person
+window.getMouse()
 right = 130
 righto = 131
 for x in range(0,100):
@@ -90,8 +97,15 @@ mouthcover = Rectangle(Point(155,60),Point(205,90))
 mouthcover.draw(window)
 mouthcover.setFill("tan")
 mouthcover.setOutline("tan")
+pupilo = Circle(Point(160,50),5)
+pupilo.draw(window)
+pupilo.setFill("blue")
+pupilt = Circle(Point(200,50),5)
+pupilt.draw(window)
+pupilt.setFill("blue")
 
-
+#Fence
+window.getMouse()
 
 red = Rectangle(Point(850,30),Point(1220,300));
 red.setFill("red")
@@ -198,15 +212,11 @@ pole.draw(window);
 
 
 
+#Start Program
+window.getMouse()
 
 
-pupilo = Circle(Point(160,50),5)
-pupilo.draw(window)
-pupilo.setFill("blue")
-pupilt = Circle(Point(200,50),5)
-pupilt.draw(window)
-pupilt.setFill("blue")
-time.sleep(3)
+
 pupiloc = Circle(Point(160,50),10)
 pupiloc.draw(window)
 pupiloc.setFill("tan")

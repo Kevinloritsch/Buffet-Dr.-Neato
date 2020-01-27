@@ -7,7 +7,7 @@ main()
       srand(time(NULL)); 
   // write code here
   int countdown;
-  countdown = 10;
+  countdown = 12;
   while(true)
   {
   cout<<"Hey user!! Make your font size 14 and your command window full screen! Program starts in "<<countdown<<" seconds!";
