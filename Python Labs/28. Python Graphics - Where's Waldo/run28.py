@@ -218,7 +218,7 @@ y = meow.getY()
 
 while(5>3):
     window.getMouse();
-    if window.getMouse().contains(Point(x,y)):
+    if window.getMouse.contains(Point(window.getMouse())):
         win = Text(Point(300,100), "You Win!!!!")
         win.draw(window)
                      
