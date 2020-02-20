@@ -1,6 +1,7 @@
 from random import *;
 from graphics import *;
 from Waldo import Waldo
+import timeit
 
 
 
@@ -206,21 +207,45 @@ pupilt = Circle(Point(200,50),5)
 pupilt.draw(window)
 pupilt.setFill("blue")
 
-rx = randint(0,2000)
-ry = randint(0,400)
+rx = randint(0,1200)
+ry = randint(0,350)
 
-find = (rx,ry)
 meow = Waldo(Point(rx,ry))
 meow.draw(window)
 
 x = meow.getX()
 y = meow.getY()
+counter = 0
+start = time.time()
 
-while(5>3):
-    window.getMouse();
-    if window.getMouse.contains(Point(window.getMouse())):
-        win = Text(Point(300,100), "You Win!!!!")
+while True:
+    
+
+    window.getMouse()
+    end = time.time()
+    counter = counter+1
+    if(end-start>.75):
+        meow.undraw()
+        rx = randint(0,1200)
+        ry = randint(0,350)
+        meow = Waldo(Point(rx,ry))
+        meow.draw(window)
+        start = time.time()
+
+    elif(meow.contains(window.getMouse())):
+        win = Text(Point(400,100), "You Win!!!!")
+        win.setSize(24)
+        win.setTextColor("red")
         win.draw(window)
+        click = Text(Point(400,200), counter)
+        click.setSize(24)
+        click.setTextColor("red")
+        click.draw(window)
+        clicks = Text(Point(670,200), "times clicked!")
+        clicks.setSize(24)
+        clicks.setTextColor("red")
+        clicks.draw(window)
+        break;
                      
 
 
