@@ -224,7 +224,7 @@ while True:
     window.getMouse()
     end = time.time()
     counter = counter+1
-    if(end-start>.75):
+    if(end-start>.85):
         meow.undraw()
         rx = randint(0,1200)
         ry = randint(0,350)
