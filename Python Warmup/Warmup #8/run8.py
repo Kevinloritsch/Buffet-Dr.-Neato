@@ -39,6 +39,12 @@ while True:
   for x in snake:
     x.move(140,0)
     time.sleep(.15)
+    huh = x.getP1()
+    huhh = huh.getX()
+    
+    if huhh >510:
+      x.move(-520,30)
+
   
 
 
